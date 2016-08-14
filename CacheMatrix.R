@@ -1,4 +1,5 @@
- makematrix <-function (a=matrix()){
+ makeCachematrix <-function (a=matrix()){
+ ## Initializing the inverse property
  inv  <-NULL
  set<-function(b){
  a<<-b
@@ -11,6 +12,7 @@
 
 
 cacheSolve <- function(a, ...) {
+## Return a matrix that is the inverse of 'x'
                 inv <- a$getInverse()
         if (!is.null(inv)) {
                 message("getting cached data")
